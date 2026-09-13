@@ -88,7 +88,7 @@ const Verify = () => {
   const handlePrint = () => window.print();
 
   const handleShare = (platform) => {
-    const text = `I'm a verified ${type} at Pernnavistaar Foundation! Registration: ${person.registrationNumber}`;
+    const text = `I'm a verified ${type} at PrernaVistaar Foundation! Registration: ${person.registrationNumber}`;
     const url = window.location.href;
     const shareUrls = {
       linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
@@ -122,7 +122,7 @@ const Verify = () => {
             Invalid Certificate
           </h1>
           <p className="text-gray-600 mb-6 text-sm sm:text-base">
-            This certificate was not issued by Pernnavistaar Foundation, or the
+            This certificate was not issued by PrernaVistaar Foundation, or the
             registration number is incorrect.
           </p>
           <div className="bg-red-50 text-red-700 p-4 rounded-lg text-sm border border-red-100 break-all">
@@ -143,7 +143,6 @@ const Verify = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-8 sm:py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Verification Success Box */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -155,7 +154,7 @@ const Verify = () => {
               Verified {type === 'volunteer' ? 'Volunteer' : 'Intern'}
             </h1>
             <p className="text-green-100 text-sm sm:text-base mt-1">
-              Official Record found in Pernnavistaar Foundation Database
+              Official Record found in PrernaVistaar Foundation Database
             </p>
           </div>
 
@@ -176,9 +175,7 @@ const Verify = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-gray-100">
                   <div>
-                    <p className="text-xs sm:text-sm text-gray-500 mb-1">
-                      Registration Number
-                    </p>
+                    <p className="text-xs sm:text-sm text-gray-500 mb-1">Registration Number</p>
                     <div className="flex items-center gap-2 justify-center md:justify-start">
                       <p className="font-mono font-bold text-primary text-sm sm:text-base break-all">
                         {person.registrationNumber}
@@ -190,31 +187,23 @@ const Verify = () => {
                       >
                         <Copy size={16} />
                       </button>
-                      {copied && (
-                        <span className="text-xs text-green-600">Copied!</span>
-                      )}
+                      {copied && <span className="text-xs text-green-600">Copied!</span>}
                     </div>
                   </div>
                   <div>
-                    <p className="text-xs sm:text-sm text-gray-500 mb-1">
-                      Certificate Number
-                    </p>
+                    <p className="text-xs sm:text-sm text-gray-500 mb-1">Certificate Number</p>
                     <p className="font-mono font-bold text-primary text-sm sm:text-base break-all">
                       {person.certificateNumber || 'N/A'}
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs sm:text-sm text-gray-500 mb-1">
-                      Department
-                    </p>
+                    <p className="text-xs sm:text-sm text-gray-500 mb-1">Department</p>
                     <p className="font-medium text-gray-800 text-sm sm:text-base">
                       {person.department || 'General'}
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs sm:text-sm text-gray-500 mb-1">
-                      Certificate Status
-                    </p>
+                    <p className="text-xs sm:text-sm text-gray-500 mb-1">Certificate Status</p>
                     <p className="font-bold text-green-600 text-sm sm:text-base flex items-center gap-1 justify-center md:justify-start">
                       <CheckCircle size={16} />
                       Active & Valid
@@ -226,7 +215,6 @@ const Verify = () => {
           </div>
         </motion.div>
 
-        {/* Certificate Preview and Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -241,7 +229,6 @@ const Verify = () => {
             records, or share it on your professional profiles.
           </p>
 
-          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12">
             <button
               onClick={handleDownload}
@@ -306,7 +293,6 @@ const Verify = () => {
             </div>
           </div>
 
-          {/* Certificate Preview */}
           <div className="border border-gray-200 rounded-xl bg-gray-50 p-3 sm:p-4 shadow-inner">
             <h3 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase text-center mb-3">
               📄 Live Preview
@@ -326,10 +312,7 @@ const Verify = () => {
                 "
               >
                 {type === 'volunteer' ? (
-                  <CertificateOfAppreciation
-                    ref={certificateRef}
-                    volunteer={person}
-                  />
+                  <CertificateOfAppreciation ref={certificateRef} volunteer={person} />
                 ) : (
                   <CertificateOfInternship ref={certificateRef} intern={person} />
                 )}
@@ -342,12 +325,8 @@ const Verify = () => {
           </div>
         </motion.div>
 
-        {/* Back Link */}
         <div className="text-center mt-8">
-          <Link
-            to="/"
-            className="text-sm text-gray-500 hover:text-accent transition"
-          >
+          <Link to="/" className="text-sm text-gray-500 hover:text-accent transition">
             ← Back to home
           </Link>
         </div>

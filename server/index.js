@@ -1,4 +1,3 @@
-
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -11,10 +10,12 @@ dotenv.config();
 
 const app = express();
 
+// Allowed origins for CORS
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:3000',
-];
+  process.env.CLIENT_URL,
+].filter(Boolean);
 
 app.use(
   cors({
@@ -31,12 +32,15 @@ app.use(
 
 app.use(express.json());
 
+// Health Route
 app.get('/', (req, res) => {
-  res.send('Pernnavistaar Foundation Backend is Running 🚀');
+  res.send('PrernaVistaar Foundation Backend is Running 🚀');
 });
 
+// Routes
 app.use('/api', apiRoutes);
 
+// ⚠️ PORT — SIRF EK BAAR
 const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {

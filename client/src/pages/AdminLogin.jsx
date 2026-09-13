@@ -45,7 +45,7 @@ const AdminLogin = () => {
         <div className="bg-primary p-8 text-center">
           <h2 className="text-2xl font-bold text-white font-poppins">Admin Portal</h2>
           <p className="text-gray-300 mt-2 text-sm">
-            Sign in to manage Pernnavistaar Foundation
+            Sign in to manage PrernaVistaar Foundation
           </p>
         </div>
 
@@ -95,10 +95,7 @@ const AdminLogin = () => {
           </form>
 
           <div className="text-center mt-6">
-            <Link
-              to="/"
-              className="text-sm text-gray-500 hover:text-accent transition"
-            >
+            <Link to="/" className="text-sm text-gray-500 hover:text-accent transition">
               ← Back to home
             </Link>
           </div>

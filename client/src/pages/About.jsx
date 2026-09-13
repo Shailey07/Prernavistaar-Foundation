@@ -5,7 +5,6 @@ import { FaHandsHelping, FaUtensils, FaUsers, FaBullseye } from 'react-icons/fa'
 const About = () => {
   return (
     <div className="bg-gray-50">
-      {/* Hero */}
       <section className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.h1
@@ -14,11 +13,11 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold font-poppins"
           >
-            About Pernnavistaar Foundation
+            About PrernaVistaar Foundation
           </motion.h1>
 
           <p className="mt-6 text-lg text-gray-200 max-w-3xl mx-auto">
-            Pernnavistaar Foundation is a non-profit organization dedicated to
+            PrernaVistaar Foundation is a non-profit organization dedicated to
             empowering youth, ensuring food security, and building environmental
             sustainability. Since 2007, we've been working with communities across
             India to create lasting change.
@@ -26,7 +25,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
           <div className="bg-white rounded-xl shadow-lg p-8">
@@ -51,7 +49,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* What We Do */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-14">What We Do</h2>
@@ -87,7 +84,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Statistics */}
       <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">

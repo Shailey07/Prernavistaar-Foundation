@@ -58,11 +58,11 @@ const Home = () => {
         <div className="absolute inset-0 z-0">
           <img
             src="/images/hero.jpeg"
-            alt="Pernnavistaar Foundation"
+            alt="PrernaVistaar Foundation"
             className="w-full h-full object-cover"
             onError={(e) => {
               e.target.onerror = null;
-              e.target.src = 'https://placehold.co/1920x1080/0F172A/ffffff?text=Pernnavistaar+Foundation';
+              e.target.src = 'https://placehold.co/1920x1080/0F172A/ffffff?text=PrernaVistaar+Foundation';
             }}
           />
           <div className="absolute inset-0 bg-primary/75"></div>
@@ -77,7 +77,7 @@ const Home = () => {
             Empowering Communities Since 2007
           </h1>
           <p className="text-base sm:text-xl text-gray-200 mb-6 sm:mb-8 font-inter px-2">
-            Join Pernnavistaar Foundation in our mission to empower youth, ensure food security, and build environmental sustainability across India.
+            Join PrernaVistaar Foundation in our mission to empower youth, ensure food security, and build environmental sustainability across India.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
             <Link to="/stories" className="bg-transparent border-2 border-white text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition text-sm sm:text-base">
@@ -96,10 +96,10 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
               <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6 font-poppins">
-                About Pernnavistaar Foundation
+                About PrernaVistaar Foundation
               </h2>
               <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-                Since 2007, Pernnavistaar Foundation has been dedicated to creating lasting change in communities across India through youth empowerment, food security, and environmental sustainability.
+                Since 2007, PrernaVistaar Foundation has been dedicated to creating lasting change in communities across India through youth empowerment, food security, and environmental sustainability.
               </p>
               <div className="space-y-3 sm:space-y-4">
                 <div>
@@ -241,7 +241,7 @@ const Home = () => {
               Verify Certificate
             </h2>
             <p className="text-white mb-6 sm:mb-8 text-sm sm:text-base px-4">
-              Enter the Registration Number to verify a certificate issued by Pernnavistaar Foundation.
+              Enter the Registration Number to verify a certificate issued by PrernaVistaar Foundation.
             </p>
 
             <form onSubmit={handleVerify} className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-lg mx-auto px-4">

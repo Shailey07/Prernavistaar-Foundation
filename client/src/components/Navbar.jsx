@@ -20,50 +20,30 @@ const Navbar = () => {
           >
             <img
               src="/images/logo.png"
-              alt="Pernnavistaar Foundation Logo"
+              alt="PrernaVistaar Foundation Logo"
               className="w-10 h-10 sm:w-12 sm:h-12 lg:w-[60px] lg:h-[50px] object-contain"
             />
 
             <span className="font-poppins font-bold text-sm sm:text-base lg:text-lg text-primary whitespace-nowrap">
-              Pernnavistaar
-              <span className="text-accent"> Foundation</span>
+              Prerna<span className="text-accent">Vistaar</span> Foundation
             </span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <Link
-              to="/"
-              className="font-medium text-gray-700 hover:text-accent transition duration-200"
-            >
+            <Link to="/" className="font-medium text-gray-700 hover:text-accent transition duration-200">
               Home
             </Link>
-
-            <Link
-              to="/about"
-              className="text-gray-700 hover:text-accent font-medium transition"
-            >
+            <Link to="/about" className="text-gray-700 hover:text-accent font-medium transition">
               About
             </Link>
-
-            <Link
-              to="/stories"
-              className="font-medium text-gray-700 hover:text-accent transition duration-200"
-            >
+            <Link to="/stories" className="font-medium text-gray-700 hover:text-accent transition duration-200">
               Stories
             </Link>
-
-            <Link
-              to="/gallery"
-              className="font-medium text-gray-700 hover:text-accent transition duration-200"
-            >
+            <Link to="/gallery" className="font-medium text-gray-700 hover:text-accent transition duration-200">
               Gallery
             </Link>
-
-            <Link
-              to="/register"
-              className="font-medium text-gray-700 hover:text-accent transition duration-200"
-            >
+            <Link to="/register" className="font-medium text-gray-700 hover:text-accent transition duration-200">
               Join Us
             </Link>
           </div>
@@ -90,43 +70,19 @@ const Navbar = () => {
             className="md:hidden bg-white border-t border-gray-100 shadow-md"
           >
             <div className="px-4 py-3 space-y-1">
-              <Link
-                to="/"
-                onClick={toggleMenu}
-                className="block rounded-md px-3 py-2 text-gray-700 font-medium hover:bg-gray-50 hover:text-accent transition"
-              >
+              <Link to="/" onClick={toggleMenu} className="block rounded-md px-3 py-2 text-gray-700 font-medium hover:bg-gray-50 hover:text-accent transition">
                 Home
               </Link>
-
-              <Link
-                to="/about"
-                onClick={toggleMenu}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-accent hover:bg-gray-50"
-              >
+              <Link to="/about" onClick={toggleMenu} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-accent hover:bg-gray-50">
                 About
               </Link>
-
-              <Link
-                to="/stories"
-                onClick={toggleMenu}
-                className="block rounded-md px-3 py-2 text-gray-700 font-medium hover:bg-gray-50 hover:text-accent transition"
-              >
+              <Link to="/stories" onClick={toggleMenu} className="block rounded-md px-3 py-2 text-gray-700 font-medium hover:bg-gray-50 hover:text-accent transition">
                 Stories
               </Link>
-
-              <Link
-                to="/gallery"
-                onClick={toggleMenu}
-                className="block rounded-md px-3 py-2 text-gray-700 font-medium hover:bg-gray-50 hover:text-accent transition"
-              >
+              <Link to="/gallery" onClick={toggleMenu} className="block rounded-md px-3 py-2 text-gray-700 font-medium hover:bg-gray-50 hover:text-accent transition">
                 Gallery
               </Link>
-
-              <Link
-                to="/register"
-                onClick={toggleMenu}
-                className="block rounded-md px-3 py-2 text-gray-700 font-medium hover:bg-gray-50 hover:text-accent transition"
-              >
+              <Link to="/register" onClick={toggleMenu} className="block rounded-md px-3 py-2 text-gray-700 font-medium hover:bg-gray-50 hover:text-accent transition">
                 Join Us
               </Link>
             </div>

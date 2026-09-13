@@ -9,7 +9,7 @@ const Stories = () => {
       name: "Priya Sharma",
       role: "Volunteer since 2022",
       location: "Bhilwara, Rajasthan",
-      quote: "Being part of Pernnavistaar has been life-changing. I've grown as a person while serving communities.",
+      quote: "Being part of PrernaVistaar has been life-changing. I've grown as a person while serving communities.",
       story: "When I first joined as a volunteer, I was shy and unsure. But the team here welcomed me with open arms. Over the past two years, I've led nutrition drives, mentored young girls, and found a purpose I never knew I had.",
       image: "/images/gallery5.jpeg",
     },

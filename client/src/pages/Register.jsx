@@ -70,7 +70,7 @@ const Register = () => {
         >
           <div className="bg-primary text-white p-8 text-center">
             <h1 className="text-3xl font-bold font-poppins mb-2">
-              Join Pernnavistaar Foundation
+              Join PrernaVistaar Foundation
             </h1>
             <p className="text-gray-300">Register as a Volunteer or Intern</p>
           </div>
@@ -103,16 +103,13 @@ const Register = () => {
               </motion.div>
             ) : (
               <>
-                {/* Mode Tabs */}
                 <div className="flex justify-center mb-8">
                   <div className="inline-flex bg-gray-100 rounded-full p-1">
                     <button
                       type="button"
                       onClick={() => { setMode('volunteer'); setError(''); }}
                       className={`px-6 py-2.5 rounded-full font-semibold text-sm transition ${
-                        mode === 'volunteer'
-                          ? 'bg-primary text-white shadow'
-                          : 'text-gray-600'
+                        mode === 'volunteer' ? 'bg-primary text-white shadow' : 'text-gray-600'
                       }`}
                     >
                       Volunteer
@@ -121,9 +118,7 @@ const Register = () => {
                       type="button"
                       onClick={() => { setMode('intern'); setError(''); }}
                       className={`px-6 py-2.5 rounded-full font-semibold text-sm transition ${
-                        mode === 'intern'
-                          ? 'bg-primary text-white shadow'
-                          : 'text-gray-600'
+                        mode === 'intern' ? 'bg-primary text-white shadow' : 'text-gray-600'
                       }`}
                     >
                       Intern
@@ -140,9 +135,7 @@ const Register = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name
-                      </label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
                       <input
                         type="text"
                         name="fullName"
@@ -153,9 +146,7 @@ const Register = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone
-                      </label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
                       <input
                         type="tel"
                         name="phone"
@@ -169,9 +160,7 @@ const Register = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Email
-                      </label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                       <input
                         type="email"
                         name="email"
@@ -183,9 +172,7 @@ const Register = () => {
                     </div>
                     {mode === 'volunteer' ? (
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Occupation
-                        </label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">Occupation</label>
                         <input
                           type="text"
                           name="occupation"
@@ -197,9 +184,7 @@ const Register = () => {
                       </div>
                     ) : (
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          College / University
-                        </label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">College / University</label>
                         <input
                           type="text"
                           name="college"
@@ -214,9 +199,7 @@ const Register = () => {
 
                   {mode === 'intern' && (
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Course / Stream
-                      </label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Course / Stream</label>
                       <input
                         type="text"
                         name="course"
@@ -230,9 +213,7 @@ const Register = () => {
                   )}
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Address
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Address</label>
                     <textarea
                       name="address"
                       value={mode === 'volunteer' ? volunteerData.address : internData.address}
@@ -271,9 +252,7 @@ const Register = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Department / Area
-                      </label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Department / Area</label>
                       <select
                         name="department"
                         value={mode === 'volunteer' ? volunteerData.department : internData.department}
@@ -291,9 +270,7 @@ const Register = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Reason for Joining
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Reason for Joining</label>
                     <textarea
                       name="reasonForJoining"
                       value={mode === 'volunteer' ? volunteerData.reasonForJoining : internData.reasonForJoining}

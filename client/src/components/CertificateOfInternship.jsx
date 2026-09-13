@@ -14,13 +14,17 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
 
   const startDate = intern.startDate
     ? new Date(intern.startDate).toLocaleDateString("en-GB", {
-        day: "2-digit", month: "short", year: "numeric"
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
       })
     : "—";
 
   const endDate = intern.endDate
     ? new Date(intern.endDate).toLocaleDateString("en-GB", {
-        day: "2-digit", month: "short", year: "numeric"
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
       })
     : "—";
 
@@ -54,7 +58,7 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
         <div style={{ position: "absolute", inset: "22px", border: "2px solid #D4AF37" }} />
         <div style={{ position: "absolute", inset: "28px", border: "0.75px solid #051D40" }} />
 
-        {/* Corner Ornaments */}
+        {/* Corner Ornaments (same as appreciation cert) */}
         <div style={{ position: "absolute", top: "34px", left: "34px", width: "90px", height: "90px", color: "#D4AF37" }}>
           <svg viewBox="0 0 100 100" fill="currentColor">
             <path d="M0,0 C30,0 45,15 45,35 C45,20 30,5 0,0 Z M0,0 C0,30 15,45 35,45 C20,45 5,30 0,0 Z M15,15 C25,15 30,20 30,30 C30,25 25,20 15,15 Z M5,40 C15,35 20,45 10,50 C5,45 0,42 5,40 Z M40,5 C35,15 45,20 50,10 C45,5 42,0 40,5 Z" />
@@ -80,23 +84,19 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
           </svg>
         </div>
 
-        {/* Center Content */}
         <div style={{ padding: "42px 100px 0", textAlign: "center" }}>
-          {/* Logo */}
           <div style={{ marginBottom: "4px" }}>
             <img
               src="/images/logo.png"
-              alt="Pernnavistaar Foundation"
+              alt="PrernaVistaar Foundation"
               style={{ width: "95px", height: "95px", objectFit: "contain", margin: "0 auto" }}
             />
           </div>
 
-          {/* Foundation Name */}
           <h1 style={{ margin: "0", fontSize: "44px", fontWeight: "normal", color: "#051D40", lineHeight: "1.1", fontFamily: "'Montserrat', sans-serif", letterSpacing: "2px" }}>
-            PERNAVISTAAR FOUNDATION
+            PRERNAVISTAAR FOUNDATION
           </h1>
 
-          {/* Subheader */}
           <div className="cert-sans" style={{ fontSize: "11px", fontWeight: "700", color: "#C5A059", letterSpacing: "4px", marginTop: "6px", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <span style={{ fontSize: "10px", marginRight: "10px" }}>—•—</span>
             ASIND, RAJASTHAN
@@ -106,14 +106,12 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
             ESTD SINCE 2007
           </div>
 
-          {/* Divider */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", margin: "12px 0" }}>
             <div style={{ width: "120px", height: "1px", background: "linear-gradient(to left, #C5A059, transparent)" }} />
             <div style={{ width: "5px", height: "5px", backgroundColor: "#051D40", transform: "rotate(45deg)", margin: "0 8px" }} />
             <div style={{ width: "120px", height: "1px", background: "linear-gradient(to right, #C5A059, transparent)" }} />
           </div>
 
-          {/* Certificate Title */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", marginBottom: "8px" }}>
             <svg width="32" height="16" viewBox="0 0 32 16" fill="none">
               <path d="M30 8H2M6 3l-5 5 5 5M14 4l-4 4 4 4M22 5l-2 3 2 3" stroke="#C5A059" strokeWidth="1.5" strokeLinecap="round"/>
@@ -130,31 +128,26 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
             THIS CERTIFICATE IS PROUDLY PRESENTED TO
           </p>
 
-          {/* Recipient Name */}
           <h3 className="cert-name" style={{ fontSize: "80px", margin: "10px auto 16px", color: "#051D40", fontWeight: "normal", lineHeight: "1", minHeight: "80px" }}>
             {intern.fullName || "Intern Name"}
           </h3>
 
-          {/* Underline */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", margin: "6px auto 14px" }}>
             <div style={{ width: "350px", height: "1px", background: "linear-gradient(to right, transparent, #C5A059, transparent)" }} />
           </div>
 
-          {/* Main Text */}
           <p className="cert-sans" style={{ maxWidth: "800px", margin: "0 auto", fontSize: "13px", color: "#1A202C", lineHeight: "1.6", fontWeight: "500" }}>
-            For successfully completing the Internship Program at Pernnavistaar Foundation
+            For successfully completing the Internship Program at PrernaVistaar Foundation
             and demonstrating dedication, professionalism, responsibility and active
             participation throughout the program.
           </p>
 
-          {/* Duration + Department */}
           <div className="cert-sans" style={{ display: "flex", justifyContent: "center", gap: "40px", margin: "20px auto 0", fontSize: "12px", color: "#051D40", fontWeight: "600" }}>
             <span>Internship Duration: <strong>{startDate} — {endDate}</strong></span>
             <span>Department / Area: <strong>{intern.department || "General"}</strong></span>
           </div>
         </div>
 
-        {/* Bottom Footer */}
         <div
           className="cert-sans"
           style={{
@@ -167,7 +160,6 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
             alignItems: "flex-end",
           }}
         >
-          {/* Left Metadata */}
           <table style={{ borderCollapse: "collapse", fontSize: "11px", color: "#051D40", width: "260px", textAlign: "left" }}>
             <tbody>
               <tr style={{ borderBottom: "1px solid #E2E8F0" }}>
@@ -185,12 +177,10 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
             </tbody>
           </table>
 
-          {/* Center Seal */}
           <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", bottom: "-10px", zIndex: 10 }}>
             <img src="/images/seal.png" alt="Official Seal" style={{ width: "120px", height: "120px", objectFit: "contain" }} />
           </div>
 
-          {/* Right Signatures */}
           <div style={{ display: "flex", alignItems: "flex-end", gap: "28px" }}>
             <div style={{ textAlign: "center", width: "115px" }}>
               <img src="/images/sign-mohit.mittal.png" alt="Mohit Mittal Signature" style={{ height: "40px", objectFit: "contain", marginBottom: "2px" }} />
