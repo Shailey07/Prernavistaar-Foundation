@@ -37,8 +37,6 @@ app.get('/', (req, res) => {
 
 app.use('/api', apiRoutes);
 
-const PORT = process.env.PORT || 5000;
-
 const startServer = async () => {
   await connectDB();
 
