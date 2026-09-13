@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 5000;
+
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -36,6 +36,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', apiRoutes);
+
+const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {
   await connectDB();
