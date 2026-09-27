@@ -40,7 +40,6 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
         .cert-name { font-family: 'Monsieur La Doulaise', cursive; }
         .cert-sans { font-family: 'Montserrat', sans-serif; }
       `}</style>
-
       <div
         ref={ref}
         style={{
@@ -83,7 +82,6 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
             <circle cx="8" cy="8" r="2.5" />
           </svg>
         </div>
-
         <div style={{ padding: "42px 100px 0", textAlign: "center" }}>
           <div style={{ marginBottom: "4px" }}>
             <img
@@ -93,7 +91,7 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
             />
           </div>
 
-          <h1 style={{ margin: "0", fontSize: "44px", fontWeight: "normal", color: "#051D40", lineHeight: "1.1", fontFamily: "'Montserrat', sans-serif", letterSpacing: "2px" }}>
+          <h1 style={{ margin: "0", fontSize: "44px", fontWeight: "500", color: "#051D40", lineHeight: "1.1", fontFamily: "'Montserrat', sans-serif", letterSpacing: "2px" }}>
             PRERNAVISTAAR FOUNDATION
           </h1>
 
@@ -123,7 +121,6 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
               <path d="M30 8H2M6 3l-5 5 5 5M14 4l-4 4 4 4M22 5l-2 3 2 3" stroke="#C5A059" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
           </div>
-
           <p className="cert-sans" style={{ fontSize: "13px", fontWeight: "600", color: "#4A5568", margin: "0 auto 20px", letterSpacing: "0.5px" }}>
             THIS CERTIFICATE IS PROUDLY PRESENTED TO
           </p>
@@ -147,7 +144,6 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
             <span>Department / Area: <strong>{intern.department || "General"}</strong></span>
           </div>
         </div>
-
         <div
           className="cert-sans"
           style={{
@@ -176,7 +172,6 @@ const CertificateOfInternship = forwardRef(({ intern }, ref) => {
               </tr>
             </tbody>
           </table>
-
           <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", bottom: "-10px", zIndex: 10 }}>
             <img src="/images/seal.png" alt="Official Seal" style={{ width: "120px", height: "120px", objectFit: "contain" }} />
           </div>

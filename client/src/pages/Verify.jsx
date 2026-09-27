@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { toPng } from 'html-to-image';
@@ -331,6 +332,20 @@ const Verify = () => {
           </Link>
         </div>
       </div>
+
+      {/* Print-only: a full-size copy of the certificate rendered to <body>.
+          On screen it is hidden; when printing, index.css hides the whole app
+          (#root) and shows ONLY this, so a single certificate page prints. */}
+      {createPortal(
+        <div className="print-only-certificate" aria-hidden="true">
+          {type === 'volunteer' ? (
+            <CertificateOfAppreciation volunteer={person} />
+          ) : (
+            <CertificateOfInternship intern={person} />
+          )}
+        </div>,
+        document.body
+      )}
     </div>
   );
 };

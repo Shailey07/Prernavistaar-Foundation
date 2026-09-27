@@ -23,3 +23,59 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-poppins);
 }
+
+/* ============================================================
+   PRINT: only the certificate should print (not the page UI).
+   The Verify page renders a full-size copy of the certificate
+   into <body> with class .print-only-certificate. On screen it
+   is hidden; when printing we hide the entire app (#root) and
+   show only that certificate, sized to a single A4 landscape page.
+   ============================================================ */
+.print-only-certificate {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  /* Hide the whole on-screen app (banner, buttons, preview, navbar, footer) */
+  #root {
+    display: none !important;
+  }
+
+  /* Show only the certificate, filling exactly one A4 landscape page */
+  .print-only-certificate {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 297mm;
+    height: 210mm;
+    overflow: hidden;
+  }
+
+  /* The certificate's inner box is fixed at 1123x794px; snap it to the
+     page so no sub-pixel overflow spills onto a second blank page. */
+  .print-only-certificate > div {
+    width: 297mm !important;
+    height: 210mm !important;
+    box-shadow: none !important;
+  }
+
+  /* Make sure gold borders, seal and background colours actually print */
+  .print-only-certificate,
+  .print-only-certificate * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
